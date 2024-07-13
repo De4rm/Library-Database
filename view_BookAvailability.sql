@@ -1,6 +1,6 @@
 
 
-CREATE VIEW view_BookAvailability AS
+CREATE OR REPLACE VIEW view_BookAvailability AS
 SELECT *
 FROM BOOKS
 WHERE BOOKID NOT IN (select BOOKID
