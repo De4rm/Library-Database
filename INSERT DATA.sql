@@ -30,4 +30,12 @@ with names (BookID, MemberID, DateFrom, DueDate, ReturnDate, Returned) AS
     SELECT 2, 2, TO_DATE('2023-04-05', 'YYYY-MM-DD'), TO_DATE('2023-04-19', 'YYYY-MM-DD'), TO_DATE('2023-04-18', 'YYYY-MM-DD'), '1' FROM DUAL UNION ALL
     SELECT 3, 3, TO_DATE('2023-04-10', 'YYYY-MM-DD'), TO_DATE('2023-04-24', 'YYYY-MM-DD'), NULL, '0' FROM DUAL
 )
+
+
+--added new record to Loans table
+INSERT INTO Loans (BookID, MemberID, DateFrom, DueDate, ReturnDate, Returned)
+WITH names (BookID, MemberID, DateFrom, DueDate, ReturnDate, Returned) AS
+(
+    SELECT 2, 3, TO_DATE('2023-04-18', 'YYYY-MM-DD'), TO_DATE('2023-05-13', 'YYYY-MM-DD'), NULL, '0' FROM DUAL
+)
 SELECT * FROM names;
